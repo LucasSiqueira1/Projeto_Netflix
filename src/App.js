@@ -1,7 +1,21 @@
 import './App.css';
-import React from 'react'
+import React, {useEffect} from 'react'
+import Tmdb from './Tmdb';
 
-function App() {
+export default() => {
+  
+  useEffect(()=>{ //carrega oq eu quiser quando a tela carregar
+    const carregarTudo = async () => {
+      //pegando a lista dos filmes
+      let lista = await Tmdb.getListaHome()
+      console.log(lista)
+      console.log("oie")
+      console.log("oie")
+    }
+    carregarTudo();
+
+  }, []);
+
   return (
     <div>
       hello
@@ -9,4 +23,3 @@ function App() {
   );
 }
 
-export default App;
