@@ -19,6 +19,7 @@ const converttFetch = async (endpoint) =>{
     -terror
     -romance
     -documentarios
+    -filmes
 */
 
 export default {
