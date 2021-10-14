@@ -10,11 +10,13 @@ export default() => {
       let lista = await Tmdb.getListaHome()
       console.log(lista)
       console.log("oie")
-      console.log("oie")
+      console.log("teste")
+      
     }
     carregarTudo();
 
   }, []);
+
 
   return (
     <div>
