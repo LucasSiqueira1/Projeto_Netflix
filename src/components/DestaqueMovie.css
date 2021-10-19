@@ -44,10 +44,33 @@
     margin-top: 15px;
 }
 
-.destaque-watchbotao{
-
+.destaque-watchbotao, .destaque-listbotao{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius:7px;
+    text-decoration: none;
+    margin-right: 10px;
+    opacity: 1;
+    transition: all ease 0.3s;
 }
 
-.destaque-listbotao{
+.destaque-watchbotao:hover, .destaque-listbotao:hover{
+    opacity:0.7;
+}
 
+.destaque-watchbotao{
+    background-color: #FFF;
+    color: #000;
+}
+.destaque-listbotao{
+    background-color: #333;
+    color: #FFF;
+}
+
+.destaque-generos{
+    margin-top:15px;
+    font-size: 18px;
+    color: #999;
 }
