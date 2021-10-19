@@ -10,7 +10,7 @@ export default ({title, items}) => {
             <div className = "movieRow-area"> 
                 <div className = "movieRow-lista">
                 {items.results.length > 0 && items.results.map((item,key)=>(
-                    <div>
+                    <div key={key} className="movieRow-item">
                         <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`}/>
                     </div>
                 ))}
