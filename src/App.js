@@ -17,11 +17,10 @@ export default() => {
       //após carregar a lista, tem que pegar o filme em destaque 
       let originals = lista.filter(i => i.slug === "originals")
       let aleatorio = Math.floor(Math.random() * (originals[0].items.results.length -1));
-      console.log(aleatorio)
       let escolhido = originals[0].items.results[aleatorio]
-      console.log(escolhido)
-
+      let escolhidoInfo = await Tmdb.getMovieInfo(escolhido.id, 'tv');
       
+      setDestaqueData(escolhidoInfo);
     }
     carregarTudo();
   }, []);

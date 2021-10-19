@@ -1,0 +1,53 @@
+.destaque{
+    height: 100vh;
+}
+
+.destaque-vertical{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+
+.destaque-horizontal{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right, #111 20%, transparent 80%);
+}
+
+.destaque-nome{
+    font-size: 60px;
+    font-weight:bold;
+}
+
+.destaque-info{
+    font-size:18px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+.destaque-point, .destaque-ano, .destaque-temp{
+    display: inline-block;
+    margin-right: 15px;
+}
+.destaque-point{
+    color: #46d369;
+}
+
+.destaque-descr{
+    margin-top: 15px;
+    font-size: 20px;
+    color: #999;
+    max-width: 40%;
+}
+
+.destaque-botao{
+    margin-top: 15px;
+}
+
+.destaque-watchbotao{
+
+}
+
+.destaque-listbotao{
+
+}
