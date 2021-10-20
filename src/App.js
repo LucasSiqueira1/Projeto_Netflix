@@ -1,9 +1,9 @@
 import './App.css';
-import LinhaFilmes from './components/LinhaFilmes/LinhaFilmes'
+import LinhaFilmes from './components/LinhaFilmes'
 import React, {useEffect, useState} from 'react'
 import Tmdb from './Tmdb';
-import DestaqueMovie from './components/Destaque/DestaqueMovie';
-import Header from './components/Header/Header';
+import DestaqueMovie from './components/Destaque';
+import Header from './components/Header';
 
 export default() => {
   const [movieList, setMovieList] = useState([]);
