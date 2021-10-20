@@ -61,6 +61,9 @@ export default() => {
         Direitos de Imagem para Netflix <br/>
         Projeto feito em React :)
       </footer>
+      
+      {movieList.length <= 0 &&
+      <div className = "load"><img src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif" alt="Loading" /> </div>}
     </div> 
   );
 }
