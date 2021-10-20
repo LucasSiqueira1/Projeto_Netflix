@@ -12,6 +12,10 @@
     width: inherit;
     height: inherit;
     background: linear-gradient(to right, #111 20%, transparent 80%);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
 }
 
 .destaque-nome{

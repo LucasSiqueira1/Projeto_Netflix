@@ -23,7 +23,7 @@ export default ( {item} ) => {
                     </div>
                     <div className="destaque-descr">{item.overview}</div>
                     <div className="destaque-botao">
-                        <a href={`/watch/${item.id}`} className="destaque-watchbotao"> Assistir </a>
+                        <a href={`/watch/${item.id}`} className="destaque-watchbotao">▶ Assistir </a>
                         <a href={`/list/add${item.id}`} className="destaque-listbotao">+ Minha Lista </a>
                     </div>
                     <div className="destaque-generos"><strong>Gêneros: </strong>{genres.join(', ')}</div>
