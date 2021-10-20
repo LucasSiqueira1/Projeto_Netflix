@@ -1,8 +1,9 @@
 import './App.css';
-import LinhaFilmes from './components/LinhaFilmes'
+import LinhaFilmes from './components/LinhaFilmes/LinhaFilmes'
 import React, {useEffect, useState} from 'react'
 import Tmdb from './Tmdb';
-import DestaqueMovie from './components/DestaqueMovie';
+import DestaqueMovie from './components/Destaque/DestaqueMovie';
+import Header from './components/Header/Header';
 
 export default() => {
   const [movieList, setMovieList] = useState([]);
@@ -28,6 +29,9 @@ export default() => {
 
   return (
     <div className = "page">
+
+      <Header />
+      
       {destaqueData && <DestaqueMovie item ={destaqueData}/>}
 
       <section className = "listas">
