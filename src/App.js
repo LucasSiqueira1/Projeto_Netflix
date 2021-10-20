@@ -8,6 +8,7 @@ import Header from './components/Header';
 export default() => {
   const [movieList, setMovieList] = useState([]);
   const [destaqueData, setDestaqueData] = useState(null);
+  const [blackHeader, setBlackHeader] = useState(false);
 
   useEffect(()=>{ //carrega oq eu quiser quando a tela carregar
     const carregarTudo = async () => {
@@ -26,11 +27,27 @@ export default() => {
     carregarTudo();
   }, []);
 
+  useEffect(()=>{
+    const scroll = () => {
+      if(window.scrollY > 10){
+        setBlackHeader(true)
+      }
+      else{
+        setBlackHeader(false)
+      }
+    }
+
+    window.addEventListener('scroll', scroll)
+    return()=> {
+      window.removeEventListener('scroll',scroll)
+    }
+  },[])
+
 
   return (
     <div className = "page">
 
-      <Header />
+      <Header  black = {blackHeader}/>
       
       {destaqueData && <DestaqueMovie item ={destaqueData}/>}
 
@@ -39,6 +56,11 @@ export default() => {
             <LinhaFilmes key={key} title={item.title} items={item.items} />
         ))}
       </section>
+
+      <footer>
+        Direitos de Imagem para Netflix <br/>
+        Projeto feito em React :)
+      </footer>
     </div> 
   );
 }
